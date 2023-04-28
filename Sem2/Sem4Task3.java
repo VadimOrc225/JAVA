@@ -41,7 +41,7 @@ public class Sem4Task3 {
 //        print
 //                zxc        qwe                asd
 
-                System.out.print("\033[H\033[2J");
+               /* System.out.print("\033[H\033[2J");
                 Scanner sc = new Scanner(System.in);
                 Deque<String> list = new LinkedList<>();
 
@@ -64,4 +64,21 @@ public class Sem4Task3 {
                 }
                 sc.close();
             }
+        }*/
+
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
         }
+        System.out.println(list);
+        System.out.println(reversed(list));
+    }
+
+    public static Deque<Integer> reversed(LinkedList<Integer> listRef) {
+        Deque<Integer> resultList = new LinkedList<>();
+        while(listRef.size()>0) {
+            resultList.push(listRef.pop());
+        }
+        return resultList;
+    }
+}
