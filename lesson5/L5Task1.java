@@ -1,6 +1,6 @@
 package lesson5;
 
-// телефонная книга
+// телефонная книга со строками
 import java.util.*;
 
 public class L5Task1 {
