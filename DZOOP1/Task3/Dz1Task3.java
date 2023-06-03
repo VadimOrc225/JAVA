@@ -24,15 +24,26 @@ public class Dz1Task3 {
     public static void main(String[] args) {
         Book b1 = new Book("Красная шапочка", "Шарль Перро", true); // без библиотеки
         Book b2 = new Book("Бременские музыканты", "Братья Гримм", false); // без библиотеки
+        b1.displayInfo(); // без библиотеки
         b2.displayInfo(); // без библиотеки
-
+        System.out.println("-------------");
         Library library1 = new Library(); // c библиотекой
         library1.addBook(new Book("Три мушкетера", "Дюма", true));
-        library1.addBook(new Book("Двадцать лет спустя", "Дюма"));
+        library1.addBook(new Book("Двадцать лет спустя", "Дюма")); // применяется метод интерфейса в методе addBook
         library1.addBook(new Book("Руслан и Людмила", "Пушкин"));
         library1.addBook(b1);
         library1.addBook(b2); // так как добавили false меняем на true
 
+        library1.displayAvailableBooks();
+        System.out.println("------------- Показываем доступные книги");
+        library1.removeBook(new Book("Три мушкетера", "Дюма"));
+        b1.setAvailabilityFalse(); // использование метода интерфейса - получаем false (Книга не доступна)
+        b2.setAvailabilityFalse(); // использование метода интерфейса - получаем false (Книга не доступна) Читаель ВЗЯЛ
+
+        b2.displayInfo();
+        b1.displayInfo();
+        System.out.println("------------- Результат после удаления книги 'Три мушкетера' и использования методов интерфейса" +
+                " по установлению недоступности");
         library1.displayAvailableBooks();
     }
 }

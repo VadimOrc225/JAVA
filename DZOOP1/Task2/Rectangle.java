@@ -1,6 +1,6 @@
 package DZOOP1.Task2;
 
-public class Rectangle {
+public class Rectangle implements I_Setter, I_ShapeInfo{
     private double width;
     private double height;
 
@@ -39,6 +39,22 @@ public class Rectangle {
     public double calculatePerimetr(double height, double width) {
         double perimetr = (height + width) * 2;
         return perimetr;
+    }
+
+    // ИНТЕРФЕЙСЫ
+    @Override
+    public void setMyWidth(double x) {
+        this.width = x; // присвоить ширине значение x
+    }
+
+    @Override
+    public void setMyHeight(double y) {
+        this.height = y; // присвоить высоте значение y
+    }
+
+    @Override
+    public double displayShapeInfo(double width, double height) {
+        return width / height;
     }
 }
 

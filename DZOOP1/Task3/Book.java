@@ -1,6 +1,6 @@
 package DZOOP1.Task3;
 
-public class Book {
+public class Book implements I_SetAvailability{
     private String title;
     private String author;
     private boolean availability;
@@ -44,5 +44,15 @@ public class Book {
                 "Книга не доступна.");
     }
 
+// ИНТЕРФЕЙСЫ
+    @Override
+    public void setAvailabilityTrue() {
+        this.availability = true;
+    }
 
+    @Override
+    public void setAvailabilityFalse() {
+        this.availability = false;
+
+    }
 }
