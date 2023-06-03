@@ -9,7 +9,7 @@ public class Library {
 
     public void addBook(Book b) {
         catalog.add(b);
-        b.setAvailability(true);
+        b.setAvailabilityTrue(); // Заменили сеттер на метод интерфейса
     }
 
     public void displayAvailableBooks() {
@@ -22,6 +22,7 @@ public class Library {
         for (Book book : catalog) {
             if (book.getTitle().equals(b.getTitle()) && book.getAuthor().equals(b.getAuthor())) {
                 catalog.remove(b);
+
             }
         }
     }
