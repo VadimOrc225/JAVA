@@ -1,6 +1,8 @@
 package DZOOP1.Task3;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Library {
 
@@ -31,5 +33,20 @@ public class Library {
         for (Book book : catalog) {
             if (book.getAuthor().equals(author)) book.displayInfo();
         }
+
+    }
+    /*
+    В третьем варианте вам нужно написать функцию, которая принимает список объектов и компаратор для сортировки
+    объектов по заданному критерию. Вы должны возвращать отсортированный список объектов.
+    Это может быть реализовано, например, с использованием метода Collections.sort() и переданного компаратора.
+     */
+    public ArrayList<Book> getCatalog() {
+        return catalog;
+    }
+
+    public ArrayList<Book> sortingCatalog(ArrayList<Book> catalog, Comparator<Book> f) {
+
+        Collections.sort(catalog, f);
+        return catalog;
     }
 }

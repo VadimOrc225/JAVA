@@ -20,6 +20,9 @@ package DZOOP1.Task3;
 информацию о книгах данного автора, находящихся в каталоге библиотеки.
 */
 
+import java.util.Collections;
+import java.util.Comparator;
+
 public class Dz1Task3 {
     public static void main(String[] args) {
         Book b1 = new Book("Красная шапочка", "Шарль Перро", true); // без библиотеки
@@ -45,5 +48,13 @@ public class Dz1Task3 {
         System.out.println("------------- Результат после удаления книги 'Три мушкетера' и использования методов интерфейса" +
                 " по установлению недоступности");
         library1.displayAvailableBooks();
+
+        System.out.println("-----Компаратор------Сортировка по фамилии автора------");
+        Comparator<Book> authorNameComparator = (n1, n2) -> (n1.getAuthor().compareTo(n2.getAuthor()));
+        //вызываем функцию , принимающую на вход список книг библиотеки и компаратор
+        // Вывод отсортированного списка
+        for (Book ex : library1.sortingCatalog(library1.getCatalog(), authorNameComparator)) {
+            System.out.println(ex.getAuthor() + " - " + ex.getTitle());
+        }
     }
 }

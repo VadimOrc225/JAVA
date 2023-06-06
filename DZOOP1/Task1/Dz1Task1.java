@@ -8,9 +8,9 @@ public class Dz1Task1 {
         c1.setName("Barsik");
         c1.setAge(3);
         c1.setHost(new Owner("Максим"));
-//        c2.setName("Vas`ka");
-//        c2.setAge(4);
-//        c2.setHost(new Owner("Николай"));
+        c2.setName("Vas`ka");
+        c2.setAge(4);
+        c2.setHost(new Owner("Николай"));
         c1.greet();
 //        c2.greet();
         c1.greet2();
