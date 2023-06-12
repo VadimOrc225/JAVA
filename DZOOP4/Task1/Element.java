@@ -1,12 +1,14 @@
 package DZOOP4.Task1;
 
 
-public class Element<T> {
+public class Element<T> { // Класс, описывающий элемент только с методами по установке поля el
+    // (геттерами и сеттерами) (Принцип единственной ответственности)
     private T el;
 
     public Element(T el) {
         this.el = el;
     }
+
     public Element() {
 
     }
@@ -19,12 +21,8 @@ public class Element<T> {
         this.el = el;
     }
 
-    public void printEl(T o) {  //первый вариант
-        System.out.println(o);
-    }
-
-    public <T> void printElement(T a){  //второй вариант
-
-        System.out.println(a);
+    public void printEl(T o) {  //O — Open-Closed (Принцип открытости-закрытости)
+        System.out.println(o); // класс расширен, но не модифицирован
     }
 }
+
