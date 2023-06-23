@@ -3,13 +3,13 @@ package DZOOP7.Calculator;
 
 import java.util.Scanner;
 
-public class CalculatorView {
+public class CalculatorView {   // Интерфейс пользователя
     Scanner iScanner = new Scanner(System.in);
 
 
     public char getInputType() {
         System.out.println("Вас приветствует калькулятор! (Работа с комплексными числами - введите 1; Работа с вещественными числами -" +
-                " введите 2");
+                " введите 2)");
         char op = iScanner.next().charAt(0);
         String s = "129";
         if (s.indexOf(op) == -1) {            // проверка ввода правильного номера операции

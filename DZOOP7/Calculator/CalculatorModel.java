@@ -1,7 +1,7 @@
 package DZOOP7.Calculator;
 
 
-    public class CalculatorModel {
+    public class CalculatorModel {  // модель, работающая с вещественными числами
         private double result;
 
 

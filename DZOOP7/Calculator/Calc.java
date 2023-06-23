@@ -1,7 +1,7 @@
 package DZOOP7.Calculator;
 
 
-public class Calc {
+public class Calc {  // основной класс
     public static void main(String[] args) throws Exception {
         CalculatorModel model = new CalculatorModel();
         CalculatorView view = new CalculatorView();

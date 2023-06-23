@@ -1,6 +1,6 @@
 package DZOOP7.Calculator;
 
-public class Complex {
+public class Complex { // модель, работающая с комплексными числами
     double real; // реальная часть
     double image; // мнимая часть
 

@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class CalculatorPresenter {
+public class CalculatorPresenter {  // видит view и модель
     private CalculatorView view;
     private CalculatorModel model;
     Complex complex;
