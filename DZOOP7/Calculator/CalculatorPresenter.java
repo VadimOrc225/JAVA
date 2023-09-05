@@ -8,7 +8,7 @@ public class CalculatorPresenter {  // видит view и модель
     private CalculatorView view;
     private CalculatorModel model;
     Complex complex;
-    String fileName = "resultCalc.txt";
+    String fileName = "DZOOP7/Calculator/resultCalc.txt";
     File file = new File(fileName);
     FileWriter writer;
 

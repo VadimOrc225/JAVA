@@ -8,7 +8,7 @@ import java.io.FileWriter;
 import java.util.Scanner;
 public class L2Task3CalcLog {
     public static void main(String[] args) throws Exception {
-        String fileName = "resultCalc.txt";
+        String fileName = "DZOOP7/Calculator/resultCalc.txt";
         File file = new File(fileName);
         FileWriter writer = new FileWriter(file, true);
         Scanner iScanner = new Scanner(System.in);
